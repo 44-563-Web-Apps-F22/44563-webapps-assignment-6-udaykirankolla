@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Musician guessing game
+        </title>
+    </head>
+ 
+<body>
+    <h1>
+        musician guess by Udaykiran Kolla.
+    </h1>
+
+<h2>Getting input</h2>
+<label for="SecretMusician">Enter the secret musician name </label>
+    <input type ="password" id="SecretMusician" name="SecretMusician" min=10 max=50 step=2 value="John Lennon"> <br>
+
+    <label for="GuessMusician">Guess the musician </label>
+    <input type ="text" id="GuessMusician" name="GuessMusician" autofocus> <br>
+
+    <input type="button" onclick="checkGuess()" value="Check the guess ">
+</form>
+<p id="result">This text will be replaced </p>
+
+<script> 
+    correct=0;
+    wrong=0;
+    function checkGuess(){
+        console.log("Check the guess")
+        secret = document.getElementById("SecretMusician").value
+        guess = document.getElementById("GuessMusician").value
+       if(secret==guess){
+        correct=correct+1
+        alert("You got it right")
+       }
+       else{
+        wrong+=1
+        alert("Wrong Musician")
+       }
+        
+        result.innerHTML="Correct guess: "+correct+"Wrong guess: "+wrong
+}
+    </script>
+
+    
+    </body>
+    </html>
