@@ -2,8 +2,8 @@
 <html>
     <head>
         <title>
-            Musician guessing game
-        </title>
+            Musician guessing game</title>
+
     </head>
  
 <body>
@@ -41,6 +41,31 @@
         result.innerHTML="Correct guess: "+correct+"Wrong guess: "+wrong
 }
     </script>
+    <div class="container">
+        <img src="Kissingbug.jpg" height="200" width="200" onclick="newImage()" id="img" alt="image">
+        <script>
+            var usingImage=1
+            function newImage(){
+                out=document.getElementById("img")
+                switch(usingImage){
+                    case 1:
+                        out.src="Kissingbug.jpg"
+                        usingImage=usingImage+1
+                        break;
+                    case 2:
+                        out.src="Owlfly.jpg"
+                        usingImage=usingImage+1
+                        break;
+                    case 3:
+                        out.src="Leafhoppers.jpg"
+                        usingImage=1
+                        break;
+                    default:
+                        out.src="Leafhoppers.jpg"                
+                }
+                
+            }
+        </script>
 
     
     </body>
