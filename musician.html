@@ -25,17 +25,29 @@
 <script> 
     correct=0;
     wrong=0;
+    count=0;
     function checkGuess(){
         console.log("Check the guess")
         secret = document.getElementById("SecretMusician").value
         guess = document.getElementById("GuessMusician").value
        if(secret==guess){
         correct=correct+1
+        count=0
         alert("You got it right")
        }
        else{
-        wrong+=1
-        alert("Wrong Musician")
+        if(count<3){
+            wrong+=1
+            count=count+1
+            alert("Wrong Musician")
+
+        }
+        else{
+            alert("Sorry, Game over.")
+        }
+        
+
+        
        }
         
         result.innerHTML="Correct guess: "+correct+"Wrong guess: "+wrong
